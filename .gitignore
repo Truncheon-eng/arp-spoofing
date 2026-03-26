@@ -1,3 +1,5 @@
-bin/*
+discover/bin/*
+discover/obj/*
+spoofing/bin/*
+spoofing/obj/*
 .vscode/*
-obj/*

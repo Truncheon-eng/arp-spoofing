@@ -1,7 +1,7 @@
 INC_DIR := ./include
 SPOOF_DIR := ./bin
-SPOOF_SRC_DIR := ./src/spoofing
-SPOOF_OBJ_DIR := ./obj/spoofing
+SPOOF_SRC_DIR := ./src
+SPOOF_OBJ_DIR := ./obj
 
 SPOOF_EXE := $(SPOOF_DIR)/spoofing.out
 SPOOF_SRC := $(wildcard $(SPOOF_SRC_DIR)/*.c)
@@ -13,7 +13,6 @@ DBGFLAGS := -g -DDEBUG_H
 
 
 .PHONY:
-	run_spoofing
 	debug_spoofing
 	spoofing
 	clean_spoofing
@@ -24,7 +23,7 @@ debug_spoofing: $(SPOOF_EXE)
 
 clean_spoofing:
 	@if [ -d "$(SPOOF_OBJ_DIR)" ]; then rm -rf $(SPOOF_OBJ_DIR); fi
-	@if [ -d "$(SPOOF_EXE)" ]; then rm "$(SPOOF_EXE)" ; fi
+	@if [ -f "$(SPOOF_EXE)" ]; then rm "$(SPOOF_EXE)" ; fi
 
 spoofing: $(SPOOF_EXE)
 

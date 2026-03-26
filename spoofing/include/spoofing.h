@@ -18,4 +18,4 @@ int set_hardware_address(libnet_t * l, struct libnet_ether_addr ** pp);
 
 void libnet_fatal(const char *failed_in, const char *errbuf);
 
-int set_broadcast_address(uint8_t ** ha_p);
+int set_broadcast_address(uint8_t ** ha_p); // implicit malloc

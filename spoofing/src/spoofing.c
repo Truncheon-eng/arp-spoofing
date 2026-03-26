@@ -4,7 +4,7 @@ int main(int argc, char * argv[]) {
     char err_buf[LIBNET_ERRBUF_SIZE];
 
     char * spa_s, * tpa_s, * dev, * tha_s;
-    spa_s = tpa_s = dev = NULL;
+    spa_s = tpa_s = dev = tha_s = NULL;
 
     uint32_t spa, tpa;
     spa = tpa = -1;
