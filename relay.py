@@ -1,6 +1,7 @@
 import sys
 import argparse
 from scapy.all import *
+from scapy.layers.l2 import Ether
 
 MAC_A = None 
 MAC_B = None
